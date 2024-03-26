@@ -18,32 +18,27 @@ function Contact() {
 
             <div className='lg:flex justify-evenly w-full'>
             <div className='lg:w-1/2 px-10'>
-                <form action="
-                " >
-                    <div className='flex flex-col gap-10'>
-                        <div className='flex w-full'>
-                        <div className='flex flex-col w-1/2'>
-                            <label htmlFor="name" className='text-xs pl-5 lg:text-sm pb-2'>YOUR FULL NAME <b className='text-hover-color'>*</b></label>
-                            <input type="text" className='w-11/12 h-14 rounded-3xl border-2 border-hover-color pl-4 text-black' id='name'  />
-                        </div>
-                        <div className='flex flex-col w-1/2'>
-                        <label htmlFor="email" className='text-xs pl-3 ml-4 lg:text-sm pb-2'>YOUR EMAIL ADDRESS <b className='text-hover-color'>*</b></label>
-                        <input type="text" className='w-11/12 ml-4  h-14 rounded-3xl border-2 border-hover-color pl-4 text-black' id='email'  />
-                        </div>
-                       </div>
-                        <div className='flex flex-col w-full' >
-                        <label htmlFor="subject" className='text-xs pl-5 lg:text-sm pb-2 '>YOUR SUBJECT <b className='text-hover-color'>*</b></label>
-                        <input type="text" className='w-full h-14 rounded-3xl border-2 border-hover-color pl-4 text-black' id='subject'  />
-                        </div>
-                        <div className='flex flex-col w-full'>
-                        <label htmlFor="message" className='text-xs pl-5 lg:text-sm pb-2 '>YOUR MESSAGE <b className='text-hover-color'>*</b></label>
-                        <textarea  className='w-full h-40 rounded-3xl pt-2 border-2 border-hover-color pl-4 text-black' id='message'
-                     
-                        style={{  resize: 'none' }} />
-                        </div>
-                    </div>
-
-                </form>
+            <form action='/' className='bg-white shadow-md rounded-lg px-8 pt-6 pb-8 mb-4'>
+              <div className='mb-4'>
+                <label htmlFor='name' className='block text-gray-700 text-sm font-bold mb-2'>Your Full Name <span className='text-red-500'>*</span></label>
+                <input type='text' id='name' name='name' className='w-full text-black px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-hover-color' required />
+              </div>
+              <div className='mb-4'>
+                <label htmlFor='email' className='block text-gray-700 text-sm font-bold mb-2'>Your Email Address <span className='text-red-500'>*</span></label>
+                <input type='email' id='email' name='email' className='w-full text-black px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-hover-color' required />
+              </div>
+              <div className='mb-4'>
+                <label htmlFor='subject' className='block text-gray-700 text-sm font-bold mb-2'>Your Subject <span className='text-red-500'>*</span></label>
+                <input type='text' id='subject' name='subject' className='w-full px-3 py-2 border border-gray-300 text-black rounded-lg focus:outline-none focus:border-hover-color' required />
+              </div>
+              <div className='mb-6'>
+                <label htmlFor='message' className='block text-gray-700 text-sm font-bold mb-2'>Your Message <span className='text-red-500'>*</span></label>
+                <textarea id='message' name='message' rows='6' className='w-full px-3 py-2 border border-gray-300 text-black rounded-lg focus:outline-none focus:border-hover-color resize-none' required></textarea>
+              </div>
+              <div className='flex justify-center'>
+                <button type='submit' className='bg-hover-color hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'>Submit</button>
+              </div>
+            </form>
             </div>
             <div className='flex flex-col gap-5 tracking-wider pl-10 mt-32 lg:mt-2 '>
                 <h1 className='font-serif text-4xl font-semibold pb-10'>GET IN TOUCH</h1>
