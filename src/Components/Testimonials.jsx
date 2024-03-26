@@ -20,21 +20,22 @@ function Testimonials() {
     if (currentSlide > 0) {
       setCurrentSlide(currentSlide - 1);
     }
-  }
+  };
 
   const handleNextClick = () => {
-    if (currentSlide < serviceData.length - 4) {
+    if (currentSlide < customers.length - 4) {
       setCurrentSlide(currentSlide + 1);
     }
-  }
+  };
 
-  return(
-
-  <section id='customers'>
+  return (
+    <section id='customers'>
       <div className='text-center mt-20 lg:mt-30'>
         <div>
           <h1 className='text-5xl font-semibold pt-4'>TESTIMONIALS</h1>
-          <p className='text-md pt-2 mb-12'>WHAT <b className='text-hover-color font-some text-3xl'>Customers Say</b></p>
+          <p className='text-md pt-2 mb-12'>
+            WHAT <b className='text-hover-color font-some text-3xl'>Customers Say</b>
+          </p>
         </div>
         <div className='relative'>
           <Carousel
@@ -45,11 +46,10 @@ function Testimonials() {
             keyBoardControl
             swipeable
             draggable
-          
             transitionDuration={500}
-            customTransition="transform 500ms ease-in-out"
+            customTransition='transform 500ms ease-in-out'
             renderButtonGroupOutside={(onArrowClickHandler, totalItems, currentSlide, itemCount) => (
-              <div className='absolute top-1/2 -translate-y-1/2 left-0 flex space-x-3'>
+              <div className='absolute top-1/2 transform -translate-y-1/2 left-0 right-0 flex justify-center space-x-3'>
                 <button
                   className='focus:outline-none bg-black hover:bg-gray-700 text-white font-bold py-2 px-4 rounded'
                   onClick={handlePrevClick}
@@ -78,7 +78,7 @@ function Testimonials() {
                 style={{ height: '620px' }}
               >
                 <div className='flex justify-center'>
-                  <img src={service.image.url} alt="Customer" className='w-56 sm:w-72 rounded-full mb-6' />
+                  <img src={service.image.url} alt='Customer' className='w-56 sm:w-72 rounded-full mb-6' />
                 </div>
                 <div>
                   <p className='text-start text-md tracking-wide opacity-60'>{service.review}</p>
@@ -88,7 +88,7 @@ function Testimonials() {
                   <p className='text-sm text-gray-500'>{service.position}</p>
                 </div>
                 <div className='absolute bottom-4 right-4'>
-                  <img src={des} alt="Design Element" className='w-24' />
+                  <img src={des} alt='Design Element' className='w-24' />
                 </div>
               </div>
             ))}

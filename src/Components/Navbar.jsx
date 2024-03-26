@@ -21,7 +21,7 @@ const Navbar = () => {
       <h1> <Menu onClick={handleMenuToggle} className='fixed right-20 top-5 h-10 w-9 opacity-65 cursor-pointer hover:opacity-90 hover:text-hover-color '/></h1>
      
          
-      <animated.div style={menuAnimation} className="fixed top-0 right-0 bg-dark-gray w-4/5 md:w-2/5 h-screen z-20 p-12 ">
+      <animated.div style={menuAnimation} className="fixed top-0 right-0 bg-dark-gray w-4/5 md:w-2/5 h-screen z-50 p-12 ">
         <div className='flex justify-between'>
           <h1 className='text-2xl font-bold text-white opacity-90'>John</h1>
         <div className="flex justify-end"><h1> <X onClick={handleMenuToggle} className='h-8 w-10 cursor-pointer text-white opacity-80 hover:text-hover-color ' /></h1>

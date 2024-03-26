@@ -22,4 +22,7 @@ body{
 }
 .react-multiple-carousel__arrow {
   background-color:rgba(44, 44, 44, 0.436) ;
+  z-index: 9;
+  color: rgba(255, 41, 91, 0.434);
 }
+

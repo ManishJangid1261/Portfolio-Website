@@ -6,6 +6,7 @@ import Projects from "./Components/Projects"
 import Services from "./Components/Services"
 import Skills from "./Components/Skills"
 import Testimonials from "./Components/Testimonials"
+import PageTimeline from "./Components/Timeline"
 import {UserProvider} from './Portfolio'
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
   return (
     <>
     <UserProvider>
+      <PageTimeline/>
     <Home/>
     <Navbar/>
     <Skills/>
