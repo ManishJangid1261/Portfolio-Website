@@ -1,10 +1,21 @@
 import React, { createContext,useState, useEffect } from 'react';
-// import Navbar from './Components/Navbar';
-
+import loader from './Components/loader.svg'
+// import Loader from "./Components/Loader";
 const UserContext = createContext()
 
 const UserProvider = ({children}) => {
   const [userData, setUserData] = useState(null);
+
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    const fakeDataFetch = () => {
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 4000);
+    };
+
+    fakeDataFetch();
+  }, []);
 
   useEffect(() => {
     fetch('https://portfolio-backend-30mp.onrender.com/api/v1/get/user/65b3a22c01d900e96c4219ae')
@@ -15,10 +26,8 @@ const UserProvider = ({children}) => {
 
  
   if (!userData) {
-    return <div className='w-full h-screen text-center'>Loading...</div>;
+    return <div className='w-full h-screen bg-black flex items-center justify-center text-center'><img src={`${loader}`} className="w-20" alt="" /></div>;
   }
-
-  // console.log(skillsData);
 
   const about = {
     username: userData.user.about.name,

@@ -24,20 +24,22 @@ function Contact() {
                         <div className='flex w-full'>
                         <div className='flex flex-col w-1/2'>
                             <label htmlFor="name" className='text-xs pl-5 lg:text-sm pb-2'>YOUR FULL NAME <b className='text-hover-color'>*</b></label>
-                            <input type="text" className='w-11/12 h-14 rounded-3xl border-2 border-hover-color text-black' id='name'  />
+                            <input type="text" className='w-11/12 h-14 rounded-3xl border-2 border-hover-color pl-4 text-black' id='name'  />
                         </div>
                         <div className='flex flex-col w-1/2'>
                         <label htmlFor="email" className='text-xs pl-5 ml-4 lg:text-sm pb-2'>YOUR EMAIL ADDRESS <b className='text-hover-color'>*</b></label>
-                        <input type="text" className='w-11/12 ml-4  h-14 rounded-3xl border-2 border-hover-color text-black' id='email'  />
+                        <input type="text" className='w-11/12 ml-4  h-14 rounded-3xl border-2 border-hover-color pl-4 text-black' id='email'  />
                         </div>
                        </div>
                         <div className='flex flex-col w-full' >
                         <label htmlFor="subject" className='text-xs pl-5 lg:text-sm pb-2 '>YOUR SUBJECT <b className='text-hover-color'>*</b></label>
-                        <input type="text" className='w-full h-14 rounded-3xl border-2 border-hover-color text-black' id='subject'  />
+                        <input type="text" className='w-full h-14 rounded-3xl border-2 border-hover-color pl-4 text-black' id='subject'  />
                         </div>
                         <div className='flex flex-col w-full'>
                         <label htmlFor="message" className='text-xs pl-5 lg:text-sm pb-2 '>YOUR MESSAGE <b className='text-hover-color'>*</b></label>
-                        <input type="text" className='w-full h-40 rounded-3xl border-2 border-hover-color text-black' id='message'  />
+                        <textarea  className='w-full h-40 rounded-3xl pt-2 border-2 border-hover-color pl-4 text-black' id='message'
+                     
+                        style={{  resize: 'none' }} />
                         </div>
                     </div>
 
@@ -77,12 +79,12 @@ function Contact() {
             </div>
 
              </div>
-             <div className='flex justify-evenly border-t-[1px] border-gray-700'>
+             <div className='flex lg:justify-evenly justify-between border-t-[1px] border-gray-700'>
                 <div>
-                <h1 className='text-md font-semibold opacity-75 pt-5 pb-2'>Copyright & Design By John doe</h1>
+                <h1 className='lg:text-md text-xs font-semibold opacity-75 pt-5 pb-2 pl-12 '>Copyright & Design By John doe</h1>
 
                 </div>
-                <div className='text-md border-l-[1px] border-r-[1px] border-gray-700 font-semibold opacity-75 pt-5 pb-2 px-3'> <a href="#home" className='flex '>BACK TO TOP <ArrowUp/></a> </div>
+                <div className='lg:text-md text-xs border-l-[1px] border-r-[1px] border-gray-700 font-semibold opacity-75 pt-5 pb-2 px-2'> <a href="#home" className='flex '>BACK TO TOP <ArrowUp className='pb-1 mb-1'/></a> </div>
              </div>
 
              

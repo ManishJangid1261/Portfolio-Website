@@ -1,6 +1,5 @@
-// import Portfolio from "./Portfolio"
+
 import Contact from "./Components/Contact"
-import Cursor from "./Components/Cursor"
 import Home from "./Components/Home"
 import Navbar from "./Components/Navbar"
 import Projects from "./Components/Projects"
@@ -14,7 +13,6 @@ function App() {
   return (
     <>
     <UserProvider>
-    <Cursor/>
     <Home/>
     <Navbar/>
     <Skills/>

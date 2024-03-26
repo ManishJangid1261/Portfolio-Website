@@ -4,6 +4,13 @@
 *{
   scroll-behavior: smooth;
 }
+@media (max-width: 1024px) {
+  .custom-carousel-item {
+    display: flex;
+    justify-content: center;
+  
+  }
+}
 
 body{
   background-color: rgb(19, 19, 19);

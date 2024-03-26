@@ -31,7 +31,7 @@ function Testimonials() {
   return(
 
   <section id='customers'>
-      <div className='text-center mt-20 lg:mt-30 relative'>
+      <div className='text-center mt-20 lg:mt-30'>
         <div>
           <h1 className='text-5xl font-semibold pt-4'>TESTIMONIALS</h1>
           <p className='text-md pt-2 mb-12'>WHAT <b className='text-hover-color font-some text-3xl'>Customers Say</b></p>
@@ -41,10 +41,11 @@ function Testimonials() {
             responsive={responsive}
             infinite
             partialVisible
-            itemClass='px-5'
+            itemClass='custom-carousel-item px-5'
             keyBoardControl
             swipeable
             draggable
+          
             transitionDuration={500}
             customTransition="transform 500ms ease-in-out"
             renderButtonGroupOutside={(onArrowClickHandler, totalItems, currentSlide, itemCount) => (
@@ -73,7 +74,7 @@ function Testimonials() {
             {customers.map((service, index) => (
               <div
                 key={index}
-                className='testimonial-card rounded-2xl shadow-lg relative overflow-hidden w-80 sm:w-96 h-96 bg-white text-black p-5 mb-20 text-center'
+                className='testimonial-card xl:ml-16  rounded-2xl shadow-lg relative overflow-hidden w-80 sm:w-96 h-96 bg-white text-black p-5 mb-20 text-center'
                 style={{ height: '620px' }}
               >
                 <div className='flex justify-center'>
