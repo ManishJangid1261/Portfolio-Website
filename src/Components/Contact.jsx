@@ -27,7 +27,7 @@ function Contact() {
                             <input type="text" className='w-11/12 h-14 rounded-3xl border-2 border-hover-color pl-4 text-black' id='name'  />
                         </div>
                         <div className='flex flex-col w-1/2'>
-                        <label htmlFor="email" className='text-xs pl-5 ml-4 lg:text-sm pb-2'>YOUR EMAIL ADDRESS <b className='text-hover-color'>*</b></label>
+                        <label htmlFor="email" className='text-xs pl-3 ml-4 lg:text-sm pb-2'>YOUR EMAIL ADDRESS <b className='text-hover-color'>*</b></label>
                         <input type="text" className='w-11/12 ml-4  h-14 rounded-3xl border-2 border-hover-color pl-4 text-black' id='email'  />
                         </div>
                        </div>
