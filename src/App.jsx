@@ -1,4 +1,5 @@
 
+import MyAccordian from "./Components/Accordian/MyAccordian"
 import Contact from "./Components/Contact"
 import Home from "./Components/Home"
 import Navbar from "./Components/Navbar"
@@ -18,6 +19,7 @@ function App() {
     <Home/>
     <Navbar/>
     <Skills/>
+    <MyAccordian/>
     <Services/>
     <Projects/>
     <Testimonials/>

@@ -17,8 +17,17 @@ const PageTimeline = () => {
   }, []);
 
   return (
-    <div className="fixed bottom-4 right-4 bg-page text-white text-lg font-bold p-3 rounded-full z-50">
-      {scrollPercentage}%
+    <div className="fixed bottom-4 right-4 z-50">
+      <div className="w-14 h-14 bg-gray-600 rounded-full relative overflow-hidden">
+        <div className="h-full bg-hover-color transition-transform duration-500 transform origin-bottom absolute bottom-0 left-0  "
+          style={{ width: `${scrollPercentage}%` }}>
+
+          <div className="absolute w-full h-full border-4 border-transparent border-dashed rounded-full animate-outline"></div>
+        </div>
+        <div className="flex justify-center items-center h-full text-white font-bold z-40 absolute inset-0 text-center">
+          {scrollPercentage}%
+        </div>
+      </div>
     </div>
   );
 };

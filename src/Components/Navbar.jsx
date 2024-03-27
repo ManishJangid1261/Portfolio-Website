@@ -31,10 +31,11 @@ const Navbar = () => {
       
       <div className='flex flex-col w-full justify-center items-center pt-16 opacity-75 '>
         <a href="#" className='text-xl font-semibold hover:text-hover-color' >HOME</a>
-        <a href="#Skills" className='text-xl font-semibold hover:text-hover-color mt-6' >Skills</a>
-        <a href="#Services" className='text-xl font-semibold hover:text-hover-color mt-6' >Services</a>
-        <a href="#portfolio" className='text-xl font-semibold hover:text-hover-color mt-6' >Portfolio</a>
-        <a href="#contact" className='text-xl font-semibold hover:text-hover-color mt-6' >Contact Us</a>
+        <a href="#Skills" className='text-xl font-semibold hover:text-hover-color mt-6' >SKILLS</a>
+        <a href="#Services" className='text-xl font-semibold hover:text-hover-color mt-6' >SERVICES</a>
+        <a href="#Resume" className='text-xl font-semibold hover:text-hover-color mt-6' >RESUME</a>
+        <a href="#portfolio" className='text-xl font-semibold hover:text-hover-color mt-6' >PORTFOLIO</a>
+        <a href="#contact" className='text-xl font-semibold hover:text-hover-color mt-6' >CONTACT US</a>
       </div>
       <div className='mt-20'>
         <h1 className='text-xl opacity-80'>My Address : </h1><p className='pl-5 text-md opacity-50'>Los Angeles , America</p>

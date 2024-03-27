@@ -5,6 +5,7 @@ import { UserContext } from '../Portfolio';
 function Projects() {
   const { projectData } = useContext(UserContext);
   const [selectedTech, setSelectedTech] = useState('All');
+  const [showAllProjects, setShowAllProjects] = useState(false);
 
   const techStackNames = Array.from(
     new Set(projectData.flatMap((project) => project.techStack.map((tech) => tech.name)))
@@ -18,6 +19,7 @@ function Projects() {
         );
 
   const filteredButtons = techStackNames.filter((_, index) => index < 4 || index > 6);
+  const limitedProjects = showAllProjects ? filteredProjects : filteredProjects.slice(0, 3);
 
   return (
     <section id='portfolio' className='pb-20'>
@@ -35,7 +37,10 @@ function Projects() {
           className={`${
             selectedTech === 'All' ? 'bg-gray-900 text-white' : 'bg-gray-700'
           } px-4 py-2 rounded-lg transition-colors duration-300 ease-in-out hover:bg-hover-color mb-2 md:mb-0`}
-          onClick={() => setSelectedTech('All')}
+          onClick={() => {
+            setSelectedTech('All');
+            setShowAllProjects(false);
+          }}
         >
           All
         </button>
@@ -45,14 +50,17 @@ function Projects() {
             className={`${
               selectedTech === techName ? 'bg-gray-900 text-white' : 'bg-gray-700'
             } px-4 py-2 rounded-lg transition-colors duration-300 ease-in-out hover:bg-hover-color mb-2 md:mb-0`}
-            onClick={() => setSelectedTech(techName)}
+            onClick={() => {
+              setSelectedTech(techName);
+              setShowAllProjects(false);
+            }}
           >
             {techName}
           </button>
         ))}
       </div>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 px-10'>
-        {filteredProjects.map((project, index) => (
+        {limitedProjects.map((project, index) => (
           <div key={project._id} className='text-white rounded-lg shadow-lg relative'>
             <div className='p-4 flex items-center'>
               <ImageWithHoverText
@@ -70,6 +78,27 @@ function Projects() {
           </div>
         ))}
       </div>
+        {!showAllProjects && filteredProjects.length > 3 && (
+          <div className='text-center w-full'>
+            <button
+              className='bg-gray-700 px-4 py-2 rounded-lg transition-colors duration-300 ease-in-out hover:bg-hover-color mb-2 md:mb-0'
+              onClick={() => setShowAllProjects(true)}
+              >
+            Show All
+            </button>
+          </div>
+        )}
+        {showAllProjects && (
+          <div className='text-center w-full'>
+            <button
+              className='bg-gray-700 px-4 py-2 rounded-lg transition-colors duration-300 ease-in-out hover:bg-hover-color mb-2 md:mb-0'
+              onClick={() => setShowAllProjects(false)}
+            >
+              
+              <a href="#portfolio">Close All</a> 
+            </button>
+          </div>
+        )}
     </section>
   );
 }

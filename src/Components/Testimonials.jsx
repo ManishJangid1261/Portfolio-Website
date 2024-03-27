@@ -87,7 +87,7 @@ function Testimonials() {
                   <h1 className='text-2xl font-semibold'>{service.name}</h1>
                   <p className='text-sm text-gray-500'>{service.position}</p>
                 </div>
-                <div className='absolute bottom-4 right-4'>
+                <div className='absolute -bottom-4 -right-4'>
                   <img src={des} alt='Design Element' className='w-24' />
                 </div>
               </div>

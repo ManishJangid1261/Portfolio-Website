@@ -3,6 +3,7 @@
 @tailwind utilities;
 *{
   scroll-behavior: smooth;
+  
 }
 @media (max-width: 1024px) {
   .custom-carousel-item {
@@ -10,6 +11,12 @@
     justify-content: center;
   
   }
+}
+
+
+.ReactCollapse--content{
+  display: flex ;
+  justify-content: center;
 }
 
 body{
@@ -20,6 +27,7 @@ body{
   font-family: "Jost" , "sans-serif";
 
 }
+
 .react-multiple-carousel__arrow {
   background-color:rgba(44, 44, 44, 0.436) ;
   z-index: 9;
