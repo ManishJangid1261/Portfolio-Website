@@ -40,7 +40,7 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
           </div>
           </div>
         <h1 className='text-black flex' > <h1 className='font-semibold text-gray-700'>Github URL :</h1> <a href="https://github.com/ManishJangid1261/Portfolio-Website " target="_blank" className='text-blue-800 flex'><GitHub className='mx-2'/> Github </a></h1>
-        <h1 className='text-black flex' > <h1 className='font-semibold text-gray-700'>Live URL :</h1> <a href="https://portfolio-website-john.user.vercel.app/" target="_blank" className='text-blue-800 flex pl-3'>portfolio-website-john</a></h1>
+        <h1 className='text-black flex' > <h1 className='font-semibold text-gray-700'>Live URL :</h1> <a href="https://portfolio-website-john-user.vercel.app/" target="_blank" className='text-blue-800 flex pl-3'>portfolio-website-john</a></h1>
         
         <p className='text-black tracking-wide opacity-80 py-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque corporis minima unde enim.</p>
         <div className='text-center'>
