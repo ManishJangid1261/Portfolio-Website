@@ -70,11 +70,6 @@ const UserProvider = ({children}) => {
     },
 }));
 
-// const Education = userData.user.timeline.map(edu => ({
-//   name: edu.company_name,
-
-// }))
-
 const projectData = userData.user.projects.map(project => ({
   enabled: project.enabled,
   sequence: project.sequence,
